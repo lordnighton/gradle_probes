@@ -3,7 +3,7 @@ task hello << {
 }
 
 def printHello() {
-    println "Hello !"
+    ant.echo(message: "Hello World!")
 }
 
 3.times {
