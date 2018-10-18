@@ -12,3 +12,6 @@ Run `gradle hello dependentTask1`
 
 # Run task by alias (abbreviation)
 Run `gradle pNN` // alias for printNickName
+
+# Run the task with daemon option
+Run `gradle hello --daemon`
