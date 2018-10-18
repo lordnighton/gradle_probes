@@ -6,3 +6,6 @@
 
 # See all available tasks
 Run `gradle tasks --all`
+
+# Run multiple tasks
+Run `gradle hello dependentTask1`
