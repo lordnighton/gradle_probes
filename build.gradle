@@ -3,7 +3,7 @@ task hello << {
 }
 
 def printHello() {
-    ant.echo(message: "Hello World!")
+    ant.echo(message: "Hello World!") // automatic integration with Ant
 }
 
 3.times {
@@ -13,6 +13,7 @@ def printHello() {
 }
 
 dependentTask0.dependsOn hello
+// interesting that dependentTask1 does NOT depend on dependentTask0 !
 dependentTask2.dependsOn dependentTask1, dependentTask0
 
 task executedAfterDependents(dependsOn: dependentTask2) << {
