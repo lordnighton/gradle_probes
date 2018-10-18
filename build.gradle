@@ -19,3 +19,7 @@ dependentTask2.dependsOn dependentTask1, dependentTask0
 task executedAfterDependents(dependsOn: dependentTask2) << {
     println("Last in execution")
 }
+
+task printNickName << {
+    println("LordNighton")
+}

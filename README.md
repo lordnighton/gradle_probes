@@ -9,3 +9,6 @@ Run `gradle tasks --all`
 
 # Run multiple tasks
 Run `gradle hello dependentTask1`
+
+# Run task by alias (abbreviation)
+Run `gradle pNN` // alias for printNickName
