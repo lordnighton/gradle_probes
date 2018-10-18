@@ -1,5 +1,20 @@
-task hello {
-    doLast {
-        println "Hello !"
+task hello << {
+    printHello()
+}
+
+def printHello() {
+    println "Hello !"
+}
+
+3.times {
+    task "dependentTask$it" << {
+        println "$it"
     }
+}
+
+dependentTask0.dependsOn hello
+dependentTask2.dependsOn dependentTask1, dependentTask0
+
+task executedAfterDependents(dependsOn: dependentTask2) << {
+    println("Last in execution")
 }
