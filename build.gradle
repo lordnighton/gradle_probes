@@ -25,6 +25,7 @@ task executedAfterDependents(dependsOn: dependentTask2) << {
 task printNickName << {
     println("LordNighton")
 }
+printNickName.onlyIf { !project.hasProperty('skipHello') }
 
 task props << {
     project.ext.myproperty = "Nick"
